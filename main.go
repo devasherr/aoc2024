@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/devasherr/advent-of-code/day2"
+	"github.com/devasherr/advent-of-code/day3"
 	"github.com/joho/godotenv"
 )
 
@@ -17,7 +17,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	req, err := http.NewRequest("GET", "https://adventofcode.com/2024/day/2/input", nil)
+	req, err := http.NewRequest("GET", "https://adventofcode.com/2024/day/3/input", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -36,5 +36,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(day2.Solve(body))
+	fmt.Println(day3.Solve(body))
 }
