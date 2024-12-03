@@ -5,12 +5,17 @@ import (
 	"strconv"
 )
 
+func getDiff(a, b int) int {
+	if a > b {
+		return a - b
+	} else {
+		return b - a
+	}
+}
+
 func checkIncrease(nums []int) bool {
 	for i := 0; i < len(nums)-1; i++ {
-		val := nums[i] - nums[i+1]
-		if val < 0 {
-			val *= -1
-		}
+		val := getDiff(nums[i], nums[i+1])
 		if nums[i] > nums[i+1] || val < 1 || val > 3 {
 			return false
 		}
@@ -21,10 +26,7 @@ func checkIncrease(nums []int) bool {
 
 func checkDecrease(nums []int) bool {
 	for i := 0; i < len(nums)-1; i++ {
-		val := nums[i] - nums[i+1]
-		if val < 0 {
-			val *= -1
-		}
+		val := getDiff(nums[i], nums[i+1])
 		if nums[i] < nums[i+1] || val < 1 || val > 3 {
 			return false
 		}
