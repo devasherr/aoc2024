@@ -17,7 +17,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	req, err := http.NewRequest("GET", "https://adventofcode.com/2024/day/4/input", nil)
+	req, err := http.NewRequest("GET", "https://adventofcode.com/2024/day/5/input", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
