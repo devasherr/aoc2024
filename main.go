@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/devasherr/advent-of-code/day4"
+	"github.com/devasherr/advent-of-code/day6"
 	"github.com/joho/godotenv"
 )
 
@@ -17,7 +17,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	req, err := http.NewRequest("GET", "https://adventofcode.com/2024/day/5/input", nil)
+	req, err := http.NewRequest("GET", "https://adventofcode.com/2024/day/6/input", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -36,5 +36,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(day4.Solve(body))
+	// body := []byte("....#.....\n.........#\n..........\n..#.......\n.......#..\n..........\n.#..^.....\n........#.\n#.........\n......#...")
+	fmt.Println(day6.Solve(body))
 }
